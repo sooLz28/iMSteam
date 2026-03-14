@@ -7,6 +7,10 @@ function searchGameOnPlatform(container, site, formattedGameName) {
 
 function createButton(container, searchLink, buttonText, tooltipText, iconPath) {
   const linkButton = document.createElement("button");
+  
+  const isExternal = iconPath.startsWith('http') || iconPath.startsWith('https') || iconPath.startsWith('data:');
+  const finalIconUrl = isExternal ? iconPath : chrome.runtime.getURL(iconPath);
+
   linkButton.style.cssText = `
     background-color: transparent;
     border: none;
@@ -22,18 +26,29 @@ function createButton(container, searchLink, buttonText, tooltipText, iconPath) 
   `;
 
   const img = new Image();
-  img.src = iconPath;
+  img.src = finalIconUrl;
   img.alt = buttonText;
   img.classList.add("site-icon");
   img.style.cssText = `
     width: 64px;
-    height: 32px;
+    height: 64px;
     object-fit: contain;
     background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%);
     padding: 5px;
     border-radius: 8px;
     transition: transform 0.3s ease;
   `;
+
+  img.onerror = function() {
+    this.style.display = 'none';
+    linkButton.innerText = buttonText;
+    linkButton.style.cssText += `
+      background: #333;
+      color: white;
+      padding: 5px 10px;
+      font-size: 11px;
+    `;
+  };
 
   linkButton.title = tooltipText;
 
@@ -61,6 +76,8 @@ function createButton(container, searchLink, buttonText, tooltipText, iconPath) 
 
   container.appendChild(linkButton);
 }
+
+
 function initializeExtension() {
   console.log("Initializing extension..."); // Debug log
   console.log("Checking for game name element..."); // Debug log
