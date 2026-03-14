@@ -15,6 +15,7 @@
   },
   "content_scripts": [
     {
+      "resources": ["deafult_sites.json"],
       "matches": [
         "https://store.steampowered.com/*",
         "https://steamcommunity.com/*"

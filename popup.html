@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Settings</h1>
+      <div class="header-buttons">
+        <button id="addSiteBtn" class="btn btn-primary">Add New Site</button>
+        <button id="resetDefault" class="btn btn-secondary">Reset</button>
+      </div>
+    </div>
+
+    <div id="siteList" class="site-grid"></div>
+  </div>
+
+  <!-- Add Site Modal -->
+  <div id="addSiteModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Add New Site</h2>
+        <button class="close-btn" id="closeAddModal">&times;</button>
+      </div>
+      <form id="addSiteForm">
+        <div class="form-group">
+          <label for="siteName">Site Name:</label>
+          <input type="text" id="siteName" required placeholder="Enter site name">
+        </div>
+        
+        <div class="form-group">
+          <label for="siteUrl">Search URL:</label>
+          <input type="text" id="siteUrl" required placeholder="Enter site URL">
+          <small>Example: https://example.com/search/</small>
+        </div>
+        
+        <div class="form-group">
+          <label for="iconType">Icon Source:</label>
+          <select id="iconType">
+            <option value="url">URL</option>
+            <option value="upload">Upload</option>
+          </select>
+        </div>
+        
+        <div class="form-group" id="image_urlGroup">
+          <label for="image_url">Icon URL:</label>
+          <input type="text" id="image_url" placeholder="Enter icon URL">
+        </div>
+        
+        <div class="form-group" id="iconUploadGroup" style="display: none;">
+          <label for="iconFile">Upload Icon:</label>
+          <input type="file" id="iconFile" accept="image/*">
+        </div>
+        
+        <div class="form-actions">
+          <button type="button" class="btn btn-secondary" id="cancelAdd">Cancel</button>
+          <button type="submit" class="btn btn-primary">Add Site</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Edit Site Modal -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Edit Site</h2>
+        <button class="close-btn" id="closeEditModal">&times;</button>
+      </div>
+      <form id="editSiteForm">
+        <div class="form-group">
+          <label for="editSiteName">Site Name:</label>
+          <input type="text" id="editSiteName" required placeholder="Enter site name">
+        </div>
+        
+        <div class="form-group">
+          <label for="editSiteUrl">Search URL:</label>
+          <input type="text" id="editSiteUrl" required placeholder="Enter site URL">
+          <small>Example: https://example.com/search/</small>
+        </div>
+        
+        <div class="form-group">
+          <label for="editIconType">Icon Source:</label>
+          <select id="editIconType">
+            <option value="url">URL</option>
+            <option value="upload">Upload</option>
+          </select>
+        </div>
+        
+        <div class="form-group" id="editImage_urlGroup">
+          <label for="editImage_url">Icon URL:</label>
+          <input type="text" id="editImage_url" placeholder="Enter icon URL">
+        </div>
+        
+        <div class="form-group" id="editIconUploadGroup" style="display: none;">
+          <label for="editIconFile">Upload Icon:</label>
+          <input type="file" id="editIconFile" accept="image/*">
+        </div>
+        
+        <div class="form-actions">
+          <button type="button" class="btn btn-secondary" id="cancelEdit">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
