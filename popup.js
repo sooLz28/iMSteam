@@ -140,11 +140,11 @@ async function resetToDefault() {
   if (confirm("This will restore all default sites. Custom sites will remain unchanged. Continue?")) {
     
     const defaultSites = await getDefaultSites();
-    const defaultUrls = defaultSites.map(site => site.search_url);
+    const defaultUrls = defaultSites.map(site => site.image_url);
     
-    // filter user-made sites from default site by their search_urls
+    // filter user-made sites from default site by their image_urls
     const customSites = currentSites.filter(site => {
-            return !defaultUrls.includes(site.search_url);
+            return !defaultUrls.includes(site.image_url);
         });    
     
     currentSites = [...defaultSites, ...customSites];
