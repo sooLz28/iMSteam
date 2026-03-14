@@ -3,32 +3,37 @@
     {
       "name": "Online Fix",
       "search_url": "https://online-fix.me/index.php?do=search&subaction=search&story=",
-      "image_url": "https://i.imgur.com/WAXRAUw.png"
+      "image_url": "icons/websites/online_fix.png"
+    },
+    {
+      "name": "SteamRip",
+      "search_url": "https://steamrip.com/?s=",
+      "image_url": "icons/websites/steamRip.png"
     },
     {
       "name": "Skidrow",
       "search_url": "https://www.skidrowreloaded.com/?s=",
-      "image_url": "https://i.imgur.com/sfzB2DE.png"
+      "image_url": "icons/websites/skidrow.png"
     },
     {
       "name": "FitGirl",
       "search_url": "https://fitgirl-repacks.site/?s=",
-      "image_url": "https://i.imgur.com/GOFbweI.png"
+      "image_url": "icons/websites/fitgirl.png"
     },
     {
       "name": "Dodi",
       "search_url": "https://dodi-repacks.site/?s=",
-      "image_url": "https://i.imgur.com/g71t1Ge.png"
+      "image_url": "icons/websites/dodi.png"
     },
     {
       "name": "Gload",
       "search_url": "https://gload.to/?s=",
-      "image_url": "https://gload.to/wp-content/uploads/2026/01/logo-1.png"
+      "image_url": "icons/websites/gload.png"
     },
     {
       "name": "GOG",
-      "search_url": "https://www.gog-games.to/search/",
-      "image_url": "https://i.imgur.com/wXfz72C.png"
+      "search_url": "https://www.gog-games.to/?search=",
+      "image_url": "icons/websites/gog.png"
     } 
   ]
 }
