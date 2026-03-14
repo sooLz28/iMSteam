@@ -6,6 +6,11 @@
   "background": {
     "service_worker": "background.js"
   },
+  "icons": {
+    "16": "icons/extension/icon16.png",
+    "48": "icons/extension/icon48.png",
+    "128": "icons/extension/icon128.png"
+  },
   "content_scripts": [
     {
       "resources": ["default_sites.json"],
