@@ -57,6 +57,6 @@ YouTube: https://www.youtube.com/results?search_query=
 
 ## Donate
 
-- [Buy Me a Coffee](https://buymeacoffee.com/imaboud)
+- [Buy IMAboud a Coffee](https://buymeacoffee.com/imaboud)
 
 </div>
